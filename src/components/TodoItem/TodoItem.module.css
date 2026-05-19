@@ -1,0 +1,130 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.15s;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: var(--color-surface-hover);
+}
+
+.item:hover .actions {
+  opacity: 1;
+}
+
+.completed .text {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border-strong);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.15s, background 0.15s;
+  color: #fff;
+}
+
+.checkbox:hover {
+  border-color: var(--color-primary);
+}
+
+.checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.priorityDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.priority_low {
+  background: var(--priority-low);
+}
+
+.priority_medium {
+  background: var(--priority-medium);
+}
+
+.priority_high {
+  background: var(--priority-high);
+}
+
+.text {
+  flex: 1;
+  font-size: 0.97rem;
+  color: var(--color-text);
+  cursor: default;
+  word-break: break-word;
+}
+
+.editInput {
+  flex: 1;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: 0.97rem;
+  font-family: inherit;
+  outline: none;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-1);
+  opacity: 0;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  color: var(--color-text-muted);
+}
+
+.edit:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.delete:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.confirm:hover {
+  background: #dcfce7;
+  color: #22c55e;
+}
+
+.cancel:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
